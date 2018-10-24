@@ -16,6 +16,8 @@
   "keywords": [
     "koa2",
     "react",
+    "react-router",
+    "mobx",
     "webpack4"
   ],
   "author": "guojian",

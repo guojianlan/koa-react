@@ -6,7 +6,7 @@ class Index extends React.Component{
     console.log(this.props);
   }
   login = ()=>{
-    console.log(this.props.commonStore.changeLoginState(true));
+    this.props.commonStore.changeLoginState(true)
   }
   render(){
     return (

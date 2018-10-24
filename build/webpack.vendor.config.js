@@ -4,7 +4,7 @@ module.exports = {
   mode:'production',
   entry: {
 		libs:[
-      'babel-polyfill',
+      '@babel/polyfill',
       'react',
       'react-dom',
       'react-router',

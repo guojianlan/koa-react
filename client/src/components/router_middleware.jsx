@@ -3,11 +3,18 @@ import { Route, Redirect } from 'react-router-dom'
 import { inject ,observer }from 'mobx-react';
 @inject( 'commonStore' )
 @observer
-class Auth extends React.Component {
+class RouterMiddleware extends React.Component {
   constructor(props) {
     super(props)
   }
+  componentWillMount(){
+    console.log(1)
+  }
+  componentDidMount(){
+    console.log(3);
+  }
   render() {
+    console.log(2);
     const { component: Component, ...rest } = this.props;
     return (
       <Route {...rest} render={props=>{
@@ -20,4 +27,4 @@ class Auth extends React.Component {
     )
   }
 }
-export default Auth
+export default RouterMiddleware

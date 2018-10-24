@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{19:function(e,n,s){e.exports={hehe:"index-hehe-3qOnE"}},21:function(e,n,s){"use strict";s.r(n);var t=s(0),r=s.n(t),a=s(19),o=s.n(a);n.default=class extends r.a.Component{constructor(e){super(e)}render(){return r.a.createElement("div",{className:o.a.hehe},"index")}}}}]);

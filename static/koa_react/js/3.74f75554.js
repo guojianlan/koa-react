@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{23:function(e,t,o){"use strict";o.r(t);var n=o(0),r=o.n(n);t.default=class extends n.Component{constructor(e){super(e),this.logout=(()=>{this.props.commonStore.changeLoginState(!1)})}render(){return r.a.createElement("div",null,"edit",r.a.createElement("div",{onClick:this.logout},"logout"))}}}}]);

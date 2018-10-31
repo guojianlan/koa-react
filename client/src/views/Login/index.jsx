@@ -4,18 +4,13 @@ class Index extends React.Component{
   constructor(props){
     super(props);
   }
-  tologin=()=>{
-    this.props.history.push({
-      pathname:'/login',
-      state:{
-        hehe:1
-      }
-    })
+  login = ()=>{
+    this.props.commonStore.changeLoginState(true)
   }
   render(){
     return (
-      <div className={style.hehe}>index
-        <div onClick={this.tologin}>tologin</div>
+      <div className={style.hehe}>login
+        <div onClick={this.login}>登录</div>
       </div>
     )
   }

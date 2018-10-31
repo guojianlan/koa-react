@@ -1,7 +1,7 @@
 import Loadable from 'react-loadable';
 import React from 'react'
 const Resume = Loadable({
-  loader: () => import('../../components/Edit/index'),
+  loader: () => import('@/views/Edit/index'),
   loading: () => <div>Loading Index...</div>,
 })
 const resumeRoutes = [

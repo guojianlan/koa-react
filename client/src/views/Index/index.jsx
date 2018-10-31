@@ -3,15 +3,16 @@ import style from './index.scss'
 class Index extends React.Component{
   constructor(props){
     super(props);
-    console.log(this.props);
   }
-  login = ()=>{
-    this.props.commonStore.changeLoginState(true)
+  tologin=()=>{
+    this.props.history.push({
+      pathname:'/login'
+    })
   }
   render(){
     return (
-      <div className={style.hehe}>login
-        <div onClick={this.login}>登录</div>
+      <div className={style.hehe}>index
+        <div onClick={this.tologin}>tologin</div>
       </div>
     )
   }

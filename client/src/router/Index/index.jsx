@@ -1,11 +1,11 @@
 import React from 'react'
 import Loadable from 'react-loadable';
 const Index = Loadable({
-  loader: () => import('../../components/Index/index'),
+  loader: () => import('@/views/Index/index'),
   loading: () => <div>Loading Index...</div>,
 })
 const Login = Loadable({
-  loader: () => import('../../components/Login/index'),
+  loader: () => import('@/views/Login/index'),
   loading: () => <div>Loading Index...</div>,
 })
 const indexRoutes = [

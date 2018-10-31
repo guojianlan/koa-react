@@ -4,10 +4,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'mobx-react';
 import stores from './stores'
 import ReactDOM from 'react-dom'
-import './assets/public.scss'
-import App from './views'
+import './assets/common.css'
 import indexRoutes from './router/index'
-const Pros = () => <div>111111</div>
+window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true;
 ReactDOM.render(<Provider {...stores}>
   <Router>
     <Switch>

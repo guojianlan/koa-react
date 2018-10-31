@@ -6,15 +6,11 @@ import { inject ,observer }from 'mobx-react';
 class RouterMiddleware extends React.Component {
   constructor(props) {
     super(props)
-  }
-  componentWillMount(){
-    console.log(1)
-  }
-  componentDidMount(){
-    console.log(3);
+    this.hehe = {
+      ishehe :false
+    }
   }
   render() {
-    console.log(2);
     const { component: Component, ...rest } = this.props;
     return (
       <Route {...rest} render={props=>{

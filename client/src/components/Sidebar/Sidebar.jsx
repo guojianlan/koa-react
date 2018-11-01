@@ -8,57 +8,28 @@ import Hidden from "@material-ui/core/Hidden";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import { createMuiTheme } from '@material-ui/core/styles';
-const theme = createMuiTheme({
-  typography: {
-    useNextVariants: true,
-  },
-});
 class Sidebar extends React.Component {
   constructor(props) {
     super(props)
-    console.log(props);
   }
-  handleListItemClick = (event, index) => {
-    console.log(index);
-  };
   render() {
-    const { classes } = this.props;
+    const { classes, ...rest } = this.props;
 
     return (
       <div>
+        {/**大于960隐藏 mobile*/}
         <Hidden mdUp implementation="css">
-          <SwipeableDrawer
-            anchor="right"
-            onOpen = {this.props.handleDrawerToggle}
-            open={this.props.open}
-            classes={{
-              paper: classes.drawerPaper
-            }}
-            onClose={this.props.handleDrawerToggle}
-          >
-            <div className={classes.sidebarWrapper}>
-              <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                  <ListItem button key={text}>
-                    <ListItemText primary={text} />
-                  </ListItem>
-                ))}
-              </List>
-            </div>
+          <SwipeableDrawer anchor="right" onOpen={rest.handleDrawerToggle} open={rest.open} onClose={rest.handleDrawerToggle} >
+            <div className={classes.sidebarWrapper}>mobild-sidebar</div>
           </SwipeableDrawer>
         </Hidden>
+        {/**小于960隐藏 pc端*/}
         <Hidden smDown implementation="css">
-          <Drawer
-            anchor="left"
-            variant="permanent"
-            open
-            classes={{
-              paper: classes.drawerPaper
-            }}
-          >
+          <Drawer open variant="permanent" anchor="left" >
             <div className={classes.sidebarWrapper}>
-              <div>pc-sidebar</div>
+              pc-sidebar
+              <div style={{height:"1000px"}}></div>
+              <div>bottom</div>
             </div>
           </Drawer>
         </Hidden>

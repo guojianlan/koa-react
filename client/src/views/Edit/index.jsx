@@ -11,6 +11,8 @@ class Edit extends Component{
     return (
       <div >edit
         <div onClick={this.logout}>logout</div>
+        <div style={{height:"2000px"}}></div>
+        <div>bottom</div>
       </div>
     )
   }

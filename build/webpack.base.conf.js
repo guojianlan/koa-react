@@ -16,7 +16,7 @@ let scssLoader = [{
     options: {
       importLoaders: 1,
       url: true,
-      modules: true,
+      modules: false,
       sourceMap: process.env.NODE_ENV === 'development',
       localIdentName: '[name]-[local]-[hash:base64:5]'
     }
@@ -58,6 +58,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
+        include:[resolve('../client/src')],
         exclude: [/node_modules/],
         use: cssLoader
       },

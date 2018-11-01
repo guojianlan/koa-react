@@ -6,9 +6,9 @@ const Resume = Loadable({
 })
 const resumeRoutes = [
   {
-    path: '/edit',
-    component: Resume
+    path: '/cv/edit',
+    component: Resume,
   },
-  { redirect: true, path: "/", to: "/edit" }
+  { redirect: true, path: "/cv", to: "/cv/edit" }
 ]
 export default resumeRoutes;
